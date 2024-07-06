@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$header: #5694BA;
+$paragraph: #81C3D7;
+$button: #81C3D7;
+$background: #EEEDE7;
+
+
+
+@mixin roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+  
+@mixin roboto-light {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+}
+
+  @mixin roboto-bold {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+  }
+
+  @mixin bungee {
+    font-family: "Bungee", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/bungee/v14/N0bU2SZBIuF2PU_0DXR1C9zfmQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+@mixin navFlexCenter {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    justify-content: space-between;
+}
+
+@mixin flexCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@mixin flexSection {
+    display: flex;
+    flex-direction: row;
+    margin: 10% 0;
+}
+
+@mixin imageSize {
+    width: 80%;
+    height: 100%;
+}
+
+@mixin leftAlign {
+    text-align: left;
+    margin: 2% 0;
+}
+
+@mixin imageBorderRadius {
+    border-radius: 20px;
+}
+
+@mixin buttonStyle {
+    button {
+        font-size: 15px; 
+        width: 100%;
+        height: 40px;
+        border: 0; 
+        border-radius: 8px;
+        background-image: linear-gradient(144deg, #5694BA, #81C3D7 50%, #5694BA);
+        color: #FFFFFF;
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        line-height: 1em;
+        max-width: 100%;
+        min-width: 140px;
+        padding: 3px;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        transition: all .3s;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+    }
+    
+    button:hover {
+        background-color: white;
+        color: black;
+        outline: 0;
+    }
+    
+    button:active {
+        transform: scale(0.9);
+    }
+    
+    button span {
+        background-color: rgb(5, 6, 45);
+        padding: 16px 24px;
+        border-radius: 6px;
+        width: 100%;
+        height: 100%;
+        transition: 300ms;
+        text-decoration: none;
+    }
+    
+    button:hover span {
+        background: none;
+        text-decoration: none;
+    }
+}
+
+
+
+
+
+
+main {
+    //Hero information 
+    .hero-header {
+
+    video {
+        width: 100%;
+        height: 100%;
+    }
+
+    #hero-header {
+        color: #5694BA;
+        font-size: 60px;
+        font-weight: bolder;
+        text-shadow: 3px 5px 2px #f7eeeec6, -3px 2px 12px rgba(64,116,181,0.79);
+        // background-color: #eeede7a5;
+        width: 70%;
+    
+        border-radius: 0px 20px 0px 0px;
+    }
+
+    #hero-paragraph {
+        color:#EEEDE7 ;
+        font-size: 40px;
+        font-weight: bold;
+        text-shadow: 3px 5px 2px#5694BA, -3px 2px 12px rgba(64,116,181,0.79);
+        // background-color: #eeede7a5;
+        width: 70%;;
+        width: 70%;
+        border-radius: 0px 0px 20px 0px;
+    }
+
+    }
+
+//ADDED HOME-HEADER TAGS TO TITLES INSTEAD OF H2 
+    .home-header{
+        @include bungee();
+        text-align: center;
+        margin-top: 1%;
+        color: $header;
+        font-size: 40px;
+    }
+
+    // #coastal-cleanup {
+    //     color: $header;
+    //     font-size: 109px;
+    //     transform: translate(0, -450%);
+    //     background-color: white;
+    //     margin: 0 10%;
+    // }
+
+    .who-are-we {
+        @include flexSection();
+
+        .who-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 5% 15%;
+        
+
+        #who-paragraph {
+            @include leftAlign();
+        }
+       
+    @include buttonStyle();
+
+        button {
+            margin: 3% 0%;
+            width: 40%;
+        }
+    } 
+    
+        img {
+            @include imageSize();
+            @include imageBorderRadius();
+            
+        }
+    }
+
+
+.our-mission {
+    @include flexSection();
+
+    .mission-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 5% 15%;
+       
+    }
+
+    #mission-paragraph {
+        @include leftAlign();
+    }
+
+    img {
+        @include imageSize();
+        @include imageBorderRadius();
+        margin-left: 20%;
+    }
+}
+
+
+
+    p {
+        @include roboto-light();
+        color: $paragraph;
+        font-size: 20px;
+    }
+
+    #title {
+        text-align: center;
+        font-size: 47px;
+        margin: 5% 0;
+        @include bungee;
+        color: $header;
+    }
+
+    button {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .staff-photos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px;
+        padding:15px;
+    }
+
+    .home-gallery{
+        height: 60vh;
+      }
+    }
+
+    
+    // below are the company photo stylings
+.company-photos {
+    @include navFlexCenter();
+    img {
+        width: 20%;
+        height: 20%;
+        margin: 100px;
+    }
+}
+
+
+/* card slider css*/
+
+.list-wrapper {
+    margin-top: 10%;
+}
+
+.list {
+    display: flex;
+    padding: 10px;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    animation: fadeInLeft;
+    animation-duration: 8s;
+   }
+   .item {
+    width:100%;
+    padding: 0 60px;
+   }
+
+   .item-cleanup {
+    width:100%;
+    padding: 0 30px;
+   }
+   .content {
+    background-color: $header;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 400px;
+  }
+   .content .headshot {
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+   }
+   .profile-details{
+    margin-top: 20px;
+    padding-bottom: 10px;
+   }
+   .name, .job {
+    color: white;
+    width: 55vmin;
+    text-align: center;
+   }
+   .job {
+    @include roboto-light();
+    font-size: 18px;
+   }
+   .name {
+    @include bungee();
+    font-size: 20px;
+   }
+   .list-wrapper {
+    position: relative;
+    margin-bottom: 5%;
+   }
+   #button--previous {
+    color: $header;
+    left: 1.5rem;
+    object-fit: cover;
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    }
+   #button--next {
+    color: $header;
+    right: 1.5rem;
+    object-fit: cover;
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    }
+
+    @media (max-width: 768px){
+    .profile-details{
+    margin-top: 20px;
+    margin-left: 50px;
+    padding-bottom: 10px;
+   }
+   .name, .job {
+    color: white;
+    width: 55vmin;
+    text-align: center;
+   }
+}
+@media(max-width: 435px){
+ .name, .job {
+  color: white;
+  width: 100vmin;
+ }
+}
+
+
+//repo
+
+@include flexSection();
+@media (max-width: 768px) {
+    .flex-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .who-section, .mission-section {
+        margin: 10% 5%;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    h1, .home-header {
+        font-size: 32px;
+    }
+    p, .hero-text {
+        font-size: 18px;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; // Consistent rounded corners
+}
+
+.content {
+    padding: 20px;
+    text-align: center; // Center content for better readability on small screens
+}
+

@@ -1,0 +1,4 @@
+celestial blue: #5694BA Header text
+sky blue: #81C3D7 paragraph text
+tea green: #C8D5B9 buttons
+white: #FFFFFF

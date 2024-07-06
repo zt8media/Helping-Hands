@@ -1,0 +1,513 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 2px;
+    background-color: #EEEDE7;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+#event-header{
+   
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    font-size: 3rem;
+    text-align: center;
+}
+#calendar {
+    flex: 1 1 60%;
+    margin-right: 20px;
+}
+
+#event-form-container {
+    flex: 1 1 35%;
+    display: flex;
+    flex-direction: column;
+}
+#eventForm{
+    font-weight: 800;
+
+}
+#submit-event{
+ 
+    display: flex;
+    justify-content: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 95%;
+    padding: 13px;
+    margin-top: 5px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+      outline: none;
+      box-shadow: none;
+}
+
+.button-event {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #81C3D7;
+    border: none;
+    cursor: pointer;
+}
+
+.button-event:hover {
+    background-color:#88cee3;
+}
+
+#map {
+    margin-top: 20px;
+    height: 400px;
+    width: 100%;
+}
+.fc-toolbar-title{
+font-size: 1rem;
+}
+.fc-button-group .fc-button  {
+    background-color: #81C3D7; /* Change button background color */
+    color: white; /* Change button text color */}
+    .fc-button-group .fc-button:hover {
+        background-color: #81C3D7; /* Change button background color on hover */
+    }
+
+.fc-dayGridMonth-button{
+    background-color:#81C3D7;
+}
+.fc-today-buttonf.c-button .fc-button-primary{
+    background-color: #81C3D7;
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    #calendar, #event-form-container {
+        flex: 1 1 100%;
+        margin-right: 0;
+    }
+    .fc-toolbar-title{
+        font-size: 10px;
+        }
+    
+    #event-header{
+            justify-content: left;
+            text-align: left;
+        }
+    
+    
+    
+    
+    }
+
+/* #5694BA sky blue: #81C3D7 tea green: #C8D5B9 white: #FFFFFF  background #EEEDE7   color of log #19447D */
+
+
+/* Nav bar styling */
+
+body {
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    padding-top: 20px; /* Space for fixed navbar */
+}
+
+.navbar {
+    background-color: #EEEDE7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.logo span {
+    color: #5694BA;
+    margin-left: 10px;
+    font-size: 24px;
+    font-family: "Bungee", sans-serif;
+    font-weight: 300;
+}
+
+.hamburger-menu {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.hamburger-menu .bar {
+    background-color: white;
+    height: 3px;
+    margin: 5px 0;
+    width: 25px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stacked vertically */
+    background-color: #EEEDE7;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen */
+    height: 100vh;
+    width: 250px; /* Width of the sidebar */
+    transition: right 0.3s ease;
+    align-items: center; /* Centers links vertically */
+    text-align: center; /* Aligns text in center */
+    z-index: 2;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #19447D;
+    padding: 20px;
+    display: block;
+    text-align: center;
+    position: relative; /* Necessary for the hover effect */
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+    content: '';
+    display: block;
+    width: 50%; /* Shortens the underline */
+    height: 2px;
+    background-color: lightblue;
+    position: absolute;
+    bottom: 0;
+    left: 25%; /* Centers the underline */
+}
+
+.nav-item#login-btn {
+    background-color: #EEEDE7;
+    border: 2px solid #19447D;
+    padding: 10px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Removes underline */
+    margin-left: 10px; /* Optional spacing */
+}
+
+#signout-btn{
+    background-color: #EEEDE7;
+    border: 2px solid #19447D;
+    padding: 10px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Removes underline */
+    margin-left: 10px; /* Optional spacing */
+
+}
+
+#login-btn:hover,
+#login-btn:focus {
+    background-color: #CAC9C4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+#signout-btn:hover,
+#signout-btn:focus {
+    background-color: #CAC9C4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-links.open {
+        right: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .nav-links {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        background: none;
+        width: auto;
+        height: auto;
+    }
+
+    .nav-links li {
+        border: none;
+    }
+
+    .nav-item#login-btn::after {
+        display: none; /* Prevents the line from appearing under the button */
+    }
+}
+ 
+
+
+/* DELETE MODAL  */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-button {
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+
+/* Add your existing CSS styles */
+
+/* Modal styles */
+
+
+
+
+.red-border {
+    border: 1px solid red;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #EEEDE7;
+    margin: 25% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 500px;
+    z-index: 30000;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Hide form container by default */
+.form-container.hide {
+    display: none;
+}
+
+/* Style the input fields and buttons */
+.form-container input, .form-container button {
+    display: block;
+    margin: 10px 0;
+}
+ 
+.form-container button{
+    width: 100%;
+}
+
+/* Adjusting the size of the modal for mobile devices */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 30% auto; 
+        width: 90%; /* Make it more narrow for mobile */
+        max-width: none;
+    }
+}
+
+
+/* Footer styling */
+.footer {
+    background-color:  #5694BA; /* Navy color */
+    padding: 20px 10px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    color: #EEEDE7; /* White color for text */
+    position: relative;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.footer-logo span {
+    color: #EEEDE7;
+    margin-left: 10px;
+    font-size: 24px;
+    font-family: "Bungee", sans-serif;
+    font-weight: 300;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-item {
+    text-decoration: none;
+    color: #EEEDE7;
+    margin: 0 10px;
+    font-size: 18px;
+    position: relative; /* Necessary for the hover effect */
+}
+
+.footer-item:hover::after,
+.footer-item.active::after {
+    content: '';
+    display: block;
+    width: 50%; /* Shortens the underline */
+    height: 2px;
+    background-color: lightblue;
+    position: absolute;
+    bottom: -2px;
+    left: 25%; /* Centers the underline */
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #EEEDE7;
+    font-size: 24px;
+}
+
+.social-media a:hover {
+    color: lightblue;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .footer-logo img {
+        height: 40px;
+    }
+
+    .footer-logo span {
+        font-size: 20px;
+    }
+
+    .footer-item {
+        font-size: 16px;
+    }
+
+    .social-media a {
+        font-size: 20px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
+
+
+#micButton {
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Initial background color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+}
+
+#micButton.recording {
+    background-color: red;
+    }
+
+    /* Updates code */
+
+    .hero-container{
+    
+      display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        margin-top: -20%;
+        z-index: 50;
+        padding-left:20px;
+        letter-spacing: 10px; 
+       font-family:  "Bungee", sans-serif;
+     
+
+    }
+
+    /* General Styles */
