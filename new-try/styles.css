@@ -1,0 +1,338 @@
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Full width and height for video in hero header */
+  main .hero-header video {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Styling for hero header title */
+  main .hero-header #hero-header {
+    color: #5694BA;
+    font-size: 60px;
+    font-weight: bolder;
+    text-shadow: 3px 5px 2px rgba(247, 238, 238, 0.776), -3px 2px 12px rgba(64, 116, 181, 0.79);
+    width: 70%;
+    border-radius: 0px 20px 0px 0px;
+  }
+  
+  /* Styling for hero header paragraph */
+  main .hero-header #hero-paragraph {
+    color: #EEEDE7;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 3px 5px 2px #5694BA, -3px 2px 12px rgba(64, 116, 181, 0.79);
+    width: 70%;
+    border-radius: 0px 0px 20px 0px;
+  }
+  
+  /* Styling for home header */
+  main .home-header {
+    font-family: "Bungee", sans-serif;
+    text-align: center;
+    margin-top: 1%;
+    color: #5694BA;
+    font-size: 40px;
+  }
+  
+  /* Grid layout for who-are-we section */
+  main .who-are-we {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns layout */
+    gap: 20px; /* Space between columns */
+    margin: 10% 0;
+  }
+  
+  /* Individual section styling in who-are-we */
+  main .who-are-we .who-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 5%;
+  }
+  
+  /* Text alignment for who-paragraph */
+  main .who-are-we .who-section #who-paragraph {
+    text-align: left;
+    margin: 2% 0;
+  }
+  
+  /* Button styling in who-are-we */
+  main .who-are-we .who-section button {
+    font-size: 15px;
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-radius: 8px;
+    background-image: linear-gradient(144deg, #5694BA, #81C3D7 50%, #5694BA);
+    color: #FFFFFF;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+  }
+  
+  /* Hover effect for buttons */
+  main .who-are-we .who-section button:hover {
+    background-color: white;
+    color: black;
+    outline: 0;
+  }
+  
+  /* Active state effect for buttons */
+  main .who-are-we .who-section button:active {
+    transform: scale(0.9);
+  }
+  
+  /* Additional span styling inside buttons */
+  main .who-are-we .who-section button span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+    text-decoration: none;
+  }
+  
+  /* Hover effect for span inside buttons */
+  main .who-are-we .who-section button:hover span {
+    background: none;
+    text-decoration: none;
+  }
+  
+  /* Margin and width adjustments for buttons */
+  main .who-are-we .who-section button {
+    margin: 3% 0%;
+    width: 40%;
+  }
+  
+  /* Image styling in who-are-we */
+  main .who-are-we img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  /* Grid layout for our-mission section */
+  main .our-mission {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns layout */
+    gap: 20px; /* Space between columns */
+    margin: 10% 0;
+  }
+  
+  /* Individual section styling in our-mission */
+  main .our-mission .mission-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 5%;
+  }
+  
+  /* Text alignment for mission-paragraph */
+  main .our-mission #mission-paragraph {
+    text-align: left;
+    margin: 2% 0;
+  }
+  
+  /* Image styling in our-mission */
+  main .our-mission img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  /* General paragraph styling */
+  main p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #81C3D7;
+    font-size: 20px;
+  }
+  
+  /* Title styling */
+  main #title {
+    text-align: center;
+    font-size: 47px;
+    margin: 5% 0;
+    font-family: "Bungee", sans-serif;
+    color: #5694BA;
+  }
+  
+  /* General button positioning */
+  main button {
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  /* Styling for staff-photos section */
+  main .staff-photos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    padding: 15px;
+  }
+  
+  /* Home gallery height */
+  main .home-gallery {
+    height: 60vh;
+  }
+  
+  /* Company photos layout */
+  .company-photos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  /* Image styling in company photos */
+  .company-photos img {
+    width: 20%;
+    height: 20%;
+    margin: 100px;
+  }
+  
+  /* Card slider styling */
+  .list-wrapper {
+    margin-top: 10%;
+  }
+  
+  .list {
+    display: flex;
+    padding: 10px;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    animation: fadeInLeft 8s;
+  }
+  
+  .item {
+    width: 100%;
+    padding: 0 60px;
+  }
+  
+  .item-cleanup {
+    width: 100%;
+    padding: 0 30px;
+  }
+  
+  .content {
+    background-color: #5694BA;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 400px;
+  }
+  
+  .content .headshot {
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .profile-details {
+    margin-top: 20px;
+    padding-bottom: 10px;
+  }
+  
+  .name, .job {
+    color: white;
+    width: 55vmin;
+    text-align: center;
+  }
+  
+  .job {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+  }
+  
+  .name {
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  
+  .list-wrapper {
+    position: relative;
+    margin-bottom: 5%;
+  }
+  
+  /* Button styling for previous/next in card slider */
+  #button--previous, #button--next {
+    color: #5694BA;
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+  }
+  
+  #button--previous {
+    left: 1.5rem;
+  }
+  
+  #button--next {
+    right: 1.5rem;
+  }
+  
+  /* Media query for screens smaller than 768px */
+  @media only screen and (max-width: 768px) {
+    main .who-are-we,
+    main .our-mission {
+      grid-template-columns: 1fr; /* Switch to single column layout */
+    }
+    main .profile-details {
+      margin-top: 20px;
+      margin-left: 50px;
+      padding-bottom: 10px;
+    }
+    main .name, main .job {
+      width: 55vmin;
+      text-align: center;
+    }
+  }
+  
+  /* Media query for screens smaller than 435px */
+  @media only screen and (max-width: 435px) {
+    main .name, main .job {
+      width: 100vmin;
+    }
+  }
+  
+  /* Hero container styling */
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-top: -20%;
+    z-index: 50;
+    padding-left: 20px;
+    letter-spacing: 10px;
+    font-family: "Bungee", sans-serif;
+  }
+  
